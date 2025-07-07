@@ -1,2 +1,3 @@
-# qa-process
-Quality Assurance process
+# Automated Testing Process
+
+TBD
