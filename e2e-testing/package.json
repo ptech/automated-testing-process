@@ -1,0 +1,29 @@
+{
+    "name": "e2e-testing",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "test": "cucumber-js"
+    },
+    "keywords": [
+        "cucumber",
+        "playwright",
+        "typescript",
+        "e2e",
+        "testing"
+    ],
+    "author": "",
+    "license": "ISC",
+    "description": "E2E Test Automation Framework using Cucumber, Playwright and TypeScript",
+    "devDependencies": {
+        "@cucumber/cucumber": "^11.3.0",
+        "@cucumber/pretty-formatter": "^1.0.1",
+        "@playwright/test": "^1.52.0",
+        "@types/node": "^22.15.29",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.8.3"
+    },
+    "dependencies": {
+        "dotenv": "^16.5.0"
+    }
+}

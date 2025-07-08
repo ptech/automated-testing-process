@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Controle 5G Fictício</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Painel de Controle de Rede 5G</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Visão Geral</a></li>
+                <li><a href="#slices">Network Slices</a></li>
+                <li><a href="#devices">Dispositivos Conectados</a></li>
+                <li><a href="#qos">QoS & Latência</a></li>
+                <li><a href="#alerts">Alertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="overview" class="dashboard-section">
+            <h2>Visão Geral da Rede</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <h3>Status Geral</h3>
+                    <p class="status-indicator online">Online</p>
+                </div>
+                <div class="metric-card">
+                    <h3>Tráfego Atual</h3>
+                    <p><strong>1.2 Tbps</strong></p>
+                </div>
+                <div class="metric-card">
+                    <h3>Latência Média</h3>
+                    <p><strong>3 ms</strong></p>
+                </div>
+                <div class="metric-card">
+                    <h3>Dispositivos Ativos</h3>
+                    <p><strong>2.3M</strong></p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="slices" class="dashboard-section">
+            <h2>Network Slices</h2>
+            <p>Gerencie e visualize as "fatias" da sua rede 5G.</p>
+            <div class="slice-list">
+                <div class="slice-item">
+                    <h3>Slice: IoT Industrial</h3>
+                    <p><strong>ID:</strong> SLICE-IOT-001</p>
+                    <p><strong>Status:</strong> Ativa</p>
+                    <p><strong>Largura de Banda Alocada:</strong> 10 Gbps</p>
+                    <p><strong>Latência Prioritária:</strong> Ultra Baixa</p>
+                    <button class="btn btn-primary">Configurar</button>
+                    <button class="btn btn-secondary">Desativar</button>
+                </div>
+                <div class="slice-item">
+                    <h3>Slice: Streaming Premium</h3>
+                    <p><strong>ID:</strong> SLICE-STREAM-002</p>
+                    <p><strong>Status:</strong> Ativa</p>
+                    <p><strong>Largura de Banda Alocada:</strong> 50 Gbps</p>
+                    <p><strong>Latência Prioritária:</strong> Baixa</p>
+                    <button class="btn btn-primary">Configurar</button>
+                    <button class="btn btn-secondary">Desativar</button>
+                </div>
+                <div class="slice-item">
+                    <h3>Slice: Veículos Autónomos</h3>
+                    <p><strong>ID:</strong> SLICE-AUTO-003</p>
+                    <p><strong>Status:</strong> Ativa (Monitoramento Crítico)</p>
+                    <p><strong>Largura de Banda Alocada:</strong> 20 Gbps</p>
+                    <p><strong>Latência Prioritária:</strong> Extrema Baixa</p>
+                    <button class="btn btn-primary">Configurar</button>
+                    <button class="btn btn-secondary">Desativar</button>
+                </div>
+            </div>
+            <button class="btn btn-add-slice">Adicionar Nova Slice</button>
+        </section>
+
+        <hr>
+
+        <section id="devices" class="dashboard-section">
+            <h2>Dispositivos Conectados</h2>
+            <p>Lista dos dispositivos atualmente conectados e seus detalhes.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID do Dispositivo</th>
+                        <th>Tipo</th>
+                        <th>Network Slice</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DEV-XYZ-001</td>
+                        <td>Sensor IoT</td>
+                        <td>IoT Industrial</td>
+                        <td class="status-indicator online">Conectado</td>
+                        <td><button class="btn btn-view">Ver Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>DEV-ABC-002</td>
+                        <td>Smartphone</td>
+                        <td>Streaming Premium</td>
+                        <td class="status-indicator online">Conectado</td>
+                        <td><button class="btn btn-view">Ver Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>DEV-PQR-003</td>
+                        <td>Carro Autônomo</td>
+                        <td>Veículos Autônomos</td>
+                        <td class="status-indicator online">Conectado</td>
+                        <td><button class="btn btn-view">Ver Detalhes</button></td>
+                    </tr>
+                    <tr>
+                        <td>DEV-LMN-004</td>
+                        <td>Câmera de Segurança</td>
+                        <td>IoT Industrial</td>
+                        <td class="status-indicator online">Conectado</td>
+                        <td><button class="btn btn-view">Ver Detalhes</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <section id="qos" class="dashboard-section">
+            <h2>QoS e Latência</h2>
+            <p>Monitore a Qualidade de Serviço (QoS) e a latência da rede.</p>
+            <div class="qos-chart">
+                <img src="https://via.placeholder.com/600x200?text=Gr%C3%A1fico+de+Lat%C3%AAncia+Simulado" alt="Gráfico de Latência">
+            </div>
+            <div class="qos-controls">
+                <label for="latency-threshold">Limite de Alerta de Latência (ms):</label>
+                <input type="number" id="latency-threshold" value="5">
+                <button class="btn btn-primary">Aplicar</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="alerts" class="dashboard-section">
+            <h2>Alertas e Eventos</h2>
+            <p>Notificações importantes da rede.</p>
+            <div class="alert-list">
+                <div class="alert-item warning">
+                    <span><strong>Alerta:</strong> Latência elevada na Slice 'IoT Industrial'.</span>
+                    <span>10:30 AM - 29/05/2025</span>
+                </div>
+                <div class="alert-item info">
+                    <span><strong>Evento:</strong> Nova conexão de dispositivo (DEV-XYZ-005).</span>
+                    <span>10:25 AM - 29/05/2025</span>
+                </div>
+                <div class="alert-item critical">
+                    <span><strong>CRÍTICO:</strong> Falha de conectividade em torre de célula #42.</span>
+                    <span>10:15 AM - 29/05/2025</span>
+                </div>
+            </div>
+            <button class="btn btn-clear-alerts">Limpar Alertas</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Painel de Controle 5G Fictício. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
